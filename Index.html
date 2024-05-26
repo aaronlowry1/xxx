@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXX Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        async function sendSearchQuery() {
+            // Retrieve the search query text
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput.value.trim();
+        
+            if (!query) {
+                alert('Please enter a search query.');
+                return;
+            }
+        
+            // Send the search query to the PHP backend
+            try {
+                const response = await fetch('backend-normal-search.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+        
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.statusText}`);
+                }
+        
+                // Process the search results
+                const results = await response.json();
+                console.log(results);
+                // Add code to display results on the page
+        
+            } catch (error) {
+                console.error('Search error:', error);
+            }
+        }
+        </script>
+        
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="button-group">
+            <div class="dropdown">
+                <button class="dropdown-btn">Our Tools</button>
+                <div class="dropdown-content">
+                    <a href="#">Academic Research Lab</a>
+                    <a href="#">Translate</a>
+                    <a href="#">Documents</a>
+                    <a href="#">Chat</a>
+                </div>
+            </div>
+            <a href="http://localhost:8001/login.php" class="login-btn">Login</a>
+        </div>
+    </nav>
+    <main>
+        <img src="logo.png" alt="Logo" class="logo">
+        <!-- Search box -->
+<!-- Search box -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search the web...">
+</div>
+
+<div class="search-buttons">
+    <button class="search-btn" onclick="sendSearchQuery()">Search</button>
+    <button class="search-btn">Search with AI</button>
+</div>
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links-wrapper">
+                <div class="footer-links">
+                    <a href="#company">Company</a>
+                    <a href="#business-inquiries">Business Inquiries</a>
+                    <a href="#how-it-works">How XXX Works</a>
+                </div>
+            </div>
+    
+            <!-- Copyright message -->
+            <div class="footer-copyright">
+                &copy; 2024 XXX.
+            </div>
+    
+            <!-- New links aligned to the right -->
+            <div class="footer-legal-links">
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+}
+
+nav {
+    padding: 20px; /* Add padding to create space around the links */
+    display: flex; /* Use flexbox for positioning */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333333; /* Black or dark grey */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0; /* Optional: adds a background color on hover */
+}
+
+.login-btn {
+    background-color: #4d94ff;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(77, 148, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    text-decoration: none; /* Add this line to remove the underline */
+  }
+
+.login-btn:hover {
+    background-color: #3572ff; /* Darker shade of blue on hover */
+    box-shadow: 0 0 15px rgba(53, 114, 255, 0.7); /* Slightly stronger glow on hover */
+}
+
+.logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 20%; /* Adjust the top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: auto; /* Maintain aspect ratio */
+    height: 100px; /* Set the height to match the Google logo */
+}
+.search-box {
+    position: absolute; /* Position the search box absolutely */
+    top: 45%; /* Adjust the top position to move it lower */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    width: 700px; /* Set the width */
+    padding: 10px 15px; /* Adjust padding (top and bottom, left and right) */
+    border-radius: 25px; /* Rounded edges */
+    box-shadow: 0 0 10px rgba(77, 148, 255, 0.5); /* Faint blue glow effect */
+}
+
+.search-box input[type="text"] {
+    border: none;
+    outline: none;
+    border-radius: 25px; /* Rounded edges */
+    font-size: 18px; /* Increase font size */
+    width: calc(100% - 50px); /* Fill the available width */
+}
+
+.search-btn {
+    background-color: #4d94ff; /* Dark blue background */
+    border: none;
+    border-top-right-radius: 25px; /* Match the search box border-radius */
+    border-bottom-right-radius: 25px; /* Match the search box border-radius */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.search-btn img {
+    width: 20px; /* Adjust the size of the magnifying glass icon */
+    height: auto;
+}
+
+.search-btn:hover {
+    background-color: #3572ff; /* Darker shade of blue on hover */
+}
+
+
+.search-buttons {
+    position: absolute; /* Position the buttons absolutely */
+    top: calc(45% + 50px); /* Adjust the top position to be below the search box */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+.search-buttons .search-btn {
+    background-color: #4d94ff; /* Dark blue background */
+    color: #ffffff; /* White text color */
+    padding: 12px 24px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 15px; /* Less rounded edges */
+    box-shadow: 0 0 10px rgba(77, 148, 255, 0.5); /* Faint blue glow effect */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Increase text size */
+    margin: 0 10px; /* Add margin between buttons */
+}
+
+.search-buttons .search-btn:hover {
+    background-color: #3572ff; /* Darker shade of blue on hover */
+    box-shadow: 0 0 15px rgba(53, 114, 255, 0.7); /* Slightly stronger glow on hover */
+}
+
+/* styles.css */
+
+/* Footer styles */
+footer {
+    background-color: #f2f2f2; /* Grey background color */
+    padding: 10px 20px; /* Add padding */
+    text-align: left; /* Left align text */
+    width: calc(100% - 40px); /* Make footer span the entire width minus padding */
+    position: absolute; /* Position the footer at the bottom */
+    bottom: 0; /* Align footer to the bottom of the viewport */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.footer-links-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-links, .footer-legal-links {
+    display: flex;
+    gap: 10px; /* Creates consistent spacing between links */
+}
+
+.footer-links a, .footer-legal-links a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.footer-links a:hover, .footer-legal-links a:hover {
+    text-decoration: none;
+    background-color: #f0f0f0; /* Optional: same hover effect as other links */
+}
+
+.footer-copyright {
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #666666;
+}
+.dropdown-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown container (needed to position the dropdown content) */
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #4d94ff; /* Dark blue background */
+    color: #ffffff; /* White text color */
+    padding: 12px 24px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 0 10px rgba(77, 148, 255, 0.5); /* Faint blue glow effect */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Match font size */
+}
+
+.dropdown-btn:hover, .dropdown-btn:focus {
+    background-color: #3572ff; /* Darker shade of blue on hover */
+    box-shadow: 0 0 15px rgba(53, 114, 255, 0.7); /* Slightly stronger glow on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add a caret symbol to indicate dropdown */
+.dropdown-btn::after {
+    content: "\25BC";
+    font-size: 12px;
+    padding-left: 5px;
+}
